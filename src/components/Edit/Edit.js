@@ -3,13 +3,26 @@ import { connect } from 'react-redux';
 
 class Edit extends Component {
 
-    goBackHome = () => {
-        this.props.history.push('/');
-    }
+  state = {
+    title: '',
+    description: ''
+  }
 
-    goBackDetails = () => {
-        this.props.history.push('/details');
-    }
+  handleChange = (event, newState) => {
+    this.setState({
+      [newState]: event.target.value
+    })
+    console.log('in handleChange:', event.target.value);
+  }
+
+
+  goBackHome = () => {
+      this.props.history.push('/');
+  }
+
+  goBackDetails = () => {
+      this.props.history.push('/details');
+  }
 
   render () {
     return (
@@ -20,13 +33,13 @@ class Edit extends Component {
             <img src={this.props.movie.poster} alt={this.props.movie.title} onClick={this.goToDetails}/>
             <p>{this.props.movie.title}</p>
             <p>{this.props.movie.description}</p>
-            <input placeholder="Edit the Title"/>
+            <input placeholder="Edit the Title" type="text" onChange={(event)=>this.handleChange(event, 'title')} value={this.state.title}/>
             <br/>
-            <textarea placeholder="Edit the Description"/>
+            <textarea placeholder="Edit the Description" onChange={(event)=>this.handleChange(event, 'description')} value={this.state.description}/>
         </section>
         <section>
-            <button>Save Edits</button>
             <button onClick={this.goBackDetails}>Cancel Edits</button>
+            <button>Save Edits</button>
         </section>
       </div>
     )

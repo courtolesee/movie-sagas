@@ -20,6 +20,7 @@ import createSagaMiddleware from 'redux-saga';
 // rootSaga generator function
 function* rootSaga() {
     yield takeEvery('GET_MOVIES', getMovies);
+    yield takeEvery('GET_GENRES', getGenres);
 }
 
 // SAGAS
@@ -29,10 +30,19 @@ function * getMovies (action) {
       yield put ({type: 'SET_MOVIES', payload: getResponse.data})
     }
     catch (error) {
-      console.log('error on getting movies:',error);
+      console.log('error on getting movies:', error);
     }
   }
-  
+
+  function * getGenres (action) {
+    try {
+      const getResponse = yield axios.get('/genres');
+      yield put ({type: 'SET_GENRES', payload: getResponse.data})
+    }
+    catch (error) {
+      console.log('error on getting genres:', error);
+    }
+  }
 
 // sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();

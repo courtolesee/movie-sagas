@@ -4,14 +4,12 @@ const pool = require('../modules/pool');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    // return all movies
+    // return genres
     const queryText = `
-        SELECT *
-        FROM movies 
-        JOIN movie_genre ON movies.id = movie_genre.movies_id
-        JOIN genres ON genres.id = movie_genre.genres_id
-        GROUP BY movies.id, movie_genre.movies_id, movie_genre.genres_id, genres.id
-        ORDER BY title;
+    SELECT "title", "name" FROM "movies"
+    JOIN "movie_genre" on "movies"."id" = "movie_genre"."movies_id"
+    JOIN "genres" on "movie_genre"."genres_id" = "genres"."id"
+    ORDER BY "genres"."name";
     `;
     pool.query(queryText)
         .then( (result) => {
