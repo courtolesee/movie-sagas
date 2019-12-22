@@ -49,6 +49,7 @@ const movies = (state = [], action) => {
     }
 }
 
+// Used to store just one movie detail
 const movieDetails = (state = [], action) => {
     switch (action.type) {
         case 'SELECT_DETAILS': return action.payload

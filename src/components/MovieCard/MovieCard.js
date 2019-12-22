@@ -10,19 +10,19 @@ class MovieCard extends Component {
         this.props.dispatch({type: 'SELECT_DETAILS', payload: {...this.props.movie}})
     }
 
-render () {
-    return (
-      <div className="imageCard">
-        {/* {JSON.stringify(this.props.movie)} */}
-        <div>
-         <img src={this.props.movie.poster} alt={this.props.movie.title} onClick={this.goToDetails}/>
-         {/* <p>{this.props.movie.genre}</p> */}
-         <p>{this.props.movie.title}</p>
-         <p>{this.props.movie.description}</p>
-         </div>
-      </div>
-    )
-  }
+    render () {
+        return (
+        <div className="imageCard">
+            {/* {JSON.stringify(this.props.movie)} */}
+            <div>
+            <img src={this.props.movie.poster} alt={this.props.movie.title} onClick={this.goToDetails}/>
+            {/* <p>{this.props.movie.genre}</p> */}
+            <p>{this.props.movie.title}</p>
+            <p>{this.props.movie.description}</p>
+            </div>
+        </div>
+        )
+    }
 }
 
 export default withRouter(connect()(MovieCard));

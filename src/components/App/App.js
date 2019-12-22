@@ -8,12 +8,9 @@ import Edit from '../Edit/Edit';
 
 class App extends Component {
 
+  // on page load
   componentDidMount () {
     this.props.dispatch({type: 'GET_MOVIES'});
-  }
-
-  goToHome = () => {
-    this.props.history.push('/');
   }
 
   // Renders the entire app on the DOM
