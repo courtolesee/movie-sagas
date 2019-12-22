@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import './App.css';
+import Home from '../Home/Home';
+import Details from '../Details/Details'
+import Edit from '../Edit/Edit';
 
 class App extends Component {
 
