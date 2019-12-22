@@ -16,6 +16,7 @@ render () {
         {/* {JSON.stringify(this.props.movie)} */}
         <div>
          <img src={this.props.movie.poster} alt={this.props.movie.title} onClick={this.goToDetails}/>
+         {/* <p>{this.props.movie.genre}</p> */}
          <p>{this.props.movie.title}</p>
          <p>{this.props.movie.description}</p>
          </div>

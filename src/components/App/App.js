@@ -12,6 +12,10 @@ class App extends Component {
     this.props.dispatch({type: 'GET_MOVIES'});
   }
 
+  goToHome = () => {
+    this.props.history.push('/');
+  }
+
   // Renders the entire app on the DOM
   render() {
     return (
