@@ -8,9 +8,14 @@ class Details extends Component {
     return (
       <div>
         <h1>Details</h1>
+        <div>
+            <img src={this.props.movie.poster} alt={this.props.movie.title} onClick={this.goToDetails}/>
+            <p>{this.props.movie.title}</p>
+            <p>{this.props.movie.description}</p>
+        </div>
       </div>
     )
   }
 }
 
-export default connect(reduxState=>({details: reduxState.movieDetails}))(Details);
+export default connect(reduxState=>({movie: reduxState.movieDetails}))(Details);
