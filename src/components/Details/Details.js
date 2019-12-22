@@ -21,6 +21,7 @@ class Details extends Component {
         <div>
             <img src={this.props.movie.poster} alt={this.props.movie.title} onClick={this.goToDetails}/>
             <p>{this.props.movie.title}</p>
+            <p>{this.props.movie.genres.join(', ')}</p>
             <p>{this.props.movie.description}</p>
             <button onClick={this.goToEdit}>Edit</button>
         </div>

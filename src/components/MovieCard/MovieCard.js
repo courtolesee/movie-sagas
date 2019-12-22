@@ -17,11 +17,11 @@ class MovieCard extends Component {
     render () {
         return (
         <div className="imageCard">
-            {/* {JSON.stringify(this.props.movie)} */}
+            {/* {JSON.stringify(this.props.movie.genres)} */}
             <div>
             <img src={this.props.movie.poster} alt={this.props.movie.title} onClick={this.goToDetails}/>
-            <p>{this.props.movie.genre}</p>
             <p>{this.props.movie.title}</p>
+            <p>{this.props.movie.genres.join(', ')}</p>
             <p>{this.props.movie.description}</p>
             </div>
         </div>
