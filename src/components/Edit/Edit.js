@@ -21,8 +21,8 @@ class Edit extends Component {
             <p>{this.props.movie.title}</p>
             <p>{this.props.movie.description}</p>
             <input placeholder="Edit the Title"/>
-            <input placeholder="Edit the Description"/>
-            <button>Submit</button>
+            <br/>
+            <textarea placeholder="Edit the Description"/>
         </section>
         <section>
             <button>Save Edits</button>

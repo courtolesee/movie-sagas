@@ -6,11 +6,14 @@ class Home extends Component {
   
     render () {
       return (
-        <div>
-        {this.props.movies.map( (movie,i)=> {     
-          return <MovieCard key={i} movie={movie}/>
-        })}
-        </div>
+        <section>
+            <p className="instructions">Click on a movie poster for more details about that movie!</p>
+            <div>
+            {this.props.movies.map( (movie,i)=> {     
+            return <MovieCard key={i} movie={movie}/>
+            })}
+            </div>
+        </section>
       )
     }
   }

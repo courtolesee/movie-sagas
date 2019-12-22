@@ -16,6 +16,7 @@ class Details extends Component {
   render () {
     return (
       <div>
+        <p className="instructions">Click 'Edit' to change the movie description or title!</p>
         <h1>Details</h1>
         <button onClick={this.goBackHome}>Back to Movie List</button>
         <div>
