@@ -1,18 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App/App.js';
+import axios from 'axios';
 import registerServiceWorker from './registerServiceWorker';
+// react imports
+import React from 'react';
+import ReactDOM from 'react-dom';
+// redux, saga imports
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import {put,takeEvery} from 'redux-saga/effects';
-import axios from 'axios';
 // Provider allows us to use redux within our react app
 import { Provider } from 'react-redux';
+// Logger to see state changes
 import logger from 'redux-logger';
 // Import saga middleware
 import createSagaMiddleware from 'redux-saga';
 
-// Create the rootSaga generator function
+
+
+// rootSaga generator function
 function* rootSaga() {
     yield takeEvery('GET_MOVIES', getMovies);
 }
@@ -29,7 +34,7 @@ function * getMovies (action) {
   }
   
 
-// Create sagaMiddleware
+// sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();
 
 
@@ -42,6 +47,13 @@ const movies = (state = [], action) => {
         default:
             return state;
     }
+}
+
+const movieDetails = (state = [], action) => {
+    switch (action.type) {
+        case 'SELECT_DETAILS': return action.payload
+        default: return state;
+      }
 }
 
 // Used to store the movie genres
@@ -58,7 +70,8 @@ const genres = (state = [], action) => {
 const storeInstance = createStore(
     combineReducers({
         movies,
-        genres,
+        movieDetails,
+        genres
     }),
     // Add sagaMiddleware to our store
     applyMiddleware(sagaMiddleware, logger),
