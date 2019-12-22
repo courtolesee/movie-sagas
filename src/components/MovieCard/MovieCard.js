@@ -26,3 +26,4 @@ class MovieCard extends Component {
 }
 
 export default withRouter(connect(reduxState=>({movies: reduxState.movies}))(MovieCard));
+
