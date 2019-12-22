@@ -25,4 +25,4 @@ render () {
   }
 }
 
-export default withRouter(connect()(MovieCard));
+export default withRouter(connect(reduxState=>({movies: reduxState.movies}))(MovieCard));
