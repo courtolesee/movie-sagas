@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import Details from '../Details/Details';
 import MovieCard from '../MovieCard/MovieCard'
 
 class Home extends Component {
