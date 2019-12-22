@@ -15,6 +15,11 @@ class Edit extends Component {
     console.log('in handleChange:', event.target.value);
   }
 
+  sendEditUpdate = (event)=>{
+    event.preventDefault();
+    this.props.dispatch({ type: 'SEND_UPDATE', payload: this.state });
+  }
+
 
   goBackHome = () => {
       this.props.history.push('/');
@@ -39,7 +44,7 @@ class Edit extends Component {
         </section>
         <section>
             <button onClick={this.goBackDetails}>Cancel Edits</button>
-            <button>Save Edits</button>
+            <button onClick={this.sendEditUpdate}>Save Edits</button>
         </section>
       </div>
     )

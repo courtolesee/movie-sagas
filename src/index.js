@@ -20,6 +20,7 @@ import createSagaMiddleware from 'redux-saga';
 // rootSaga generator function
 function* rootSaga() {
     yield takeEvery('GET_MOVIES', getMovies);
+    yield takeEvery('SEND_UPDATE', updateMovie)
 }
 
 // SAGAS
@@ -32,6 +33,16 @@ function * getMovies (action) {
       console.log('error on getting movies:', error);
     }
   }
+
+function * updateMovie (action) {
+    try {
+        const getResponse = yield axios.put(`/movies/+${action.payload.id}`, action.payload);
+        yield put ({type: 'GET_MOVIES', payload: getResponse.data})
+    }
+    catch (error) {
+        console.log('error on PUT getting movies:', error);
+    }
+}
 
 // sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();
@@ -56,11 +67,21 @@ const movieDetails = (state = [], action) => {
       }
 }
 
+// Used to store movie edits to send to DB
+const sendUpdate = (state=[], action)=>{
+    if(action.type === `SEND_UPDATE`){
+        return [...state, action.payload]
+    }
+    return state;
+}
+
+
 // Create one store that all components can use
 const storeInstance = createStore(
     combineReducers({
         movies,
-        movieDetails
+        movieDetails,
+        sendUpdate
     }),
     // Add sagaMiddleware to our store
     applyMiddleware(sagaMiddleware, logger),
