@@ -13,4 +13,4 @@ class Details extends Component {
   }
 }
 
-export default connect(reduxState=>({details: reduxState.detailsReducer}))(Details);
+export default connect(reduxState=>({details: reduxState.movieDetails}))(Details);
