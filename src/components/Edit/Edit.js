@@ -23,6 +23,7 @@ class Edit extends Component {
   sendEditUpdate = (event)=>{
     event.preventDefault();
     this.props.dispatch({ type: 'SEND_UPDATE', payload: this.state });
+    this.props.history.push('/');
   }
 
   // if back to movie list is clicked
