@@ -5,6 +5,7 @@ Duration: Weekend Challenge (2 days)
 This project stores movie information, including each movie's poster, title, associated genres, and description. Each movie's title and desctiption can be edited by the user.
 
 ## Project Organization
+Whiteboard to do task organization and wireframing
 ![Whiteboard Wireframe & Checklist](Wireframe_Checklsit.jpeg)
 
 ## Installation
