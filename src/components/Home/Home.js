@@ -9,7 +9,7 @@ class Home extends Component {
       return (
         <section>
             <p className="instructions">Click on a movie poster for more details about that movie!</p>
-            <div>
+            <div className="imageGrid">
             {this.props.movies.map( (movie,i)=> {     
             return <MovieCard key={i} movie={movie}/>
             })}

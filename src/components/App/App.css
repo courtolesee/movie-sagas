@@ -25,3 +25,13 @@ textarea {
 input {
   width: 200px;
 }
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: 20% 20% auto 20% 20%;
+}
+
+.movieCard {
+  grid-column-start: 1;
+  grid-column-end: five;
+}
