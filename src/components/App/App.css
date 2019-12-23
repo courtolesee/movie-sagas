@@ -1,14 +1,12 @@
 .App {
   text-align: center;
-  padding-left: 1%;
-  padding-right: 1%;
 }
 
 
 .appHeader {
   background-color: black;
   color: white;
-  font-size: 3em;
+  font-size: 4em;
   padding: 0%;
   margin-top: 0%;
   margin-bottom: 0%;
@@ -17,7 +15,10 @@
 .instructions {
   margin-top: 0%;
   font-style: italic;
-  padding-bottom: 1%;
+  padding-top: .5%;
+  padding-bottom: .5%;
+  color: white;
+  background-color: rgb(53, 50, 50);
 }
 
 textarea {
@@ -33,6 +34,8 @@ input {
   display: grid;
   grid-template-columns: 18% 18% 18% 18% 18%;
   justify-content: space-between;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
 .movieCard {
@@ -42,6 +45,7 @@ input {
 
 .poster {
   margin-bottom: 0%;
+  outline: 2px solid black;
 }
 
 .title {
