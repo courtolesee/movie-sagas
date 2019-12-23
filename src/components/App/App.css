@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
 
@@ -15,6 +17,7 @@
 .instructions {
   margin-top: 0%;
   font-style: italic;
+  padding-bottom: 1%;
 }
 
 textarea {
@@ -28,10 +31,32 @@ input {
 
 .imageGrid {
   display: grid;
-  grid-template-columns: 20% 20% auto 20% 20%;
+  grid-template-columns: 18% 18% 18% 18% 18%;
+  justify-content: space-between;
 }
 
 .movieCard {
   grid-column-start: 1;
   grid-column-end: five;
+}
+
+.poster {
+  margin-bottom: 0%;
+}
+
+.title {
+  margin-top: 0%;
+  margin-bottom: 0%;
+  font-size: 1.75em;
+}
+
+.genres {
+  font-size: 1em;
+  font-style: italic;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.description {
+  font-size: 0.85em;
 }

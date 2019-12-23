@@ -15,10 +15,10 @@ class MovieCard extends Component {
         <div>
             {/* {JSON.stringify(this.props.movie)} */}
             <div className="imageCard">
-                <img src={this.props.movie.poster} alt={this.props.movie.title} onClick={this.goToDetails}/>
-                <p>{this.props.movie.title}</p>
-                <p>{this.props.movie.genres.join(', ')}</p>
-                <p>{this.props.movie.description}</p>
+                <img className="poster" src={this.props.movie.poster} alt={this.props.movie.title} onClick={this.goToDetails}/>
+                <p className="title">{this.props.movie.title}</p>
+                <p className="genres">{this.props.movie.genres.join(', ')}</p>
+                <p className="description">{this.props.movie.description}</p>
             </div>
         </div>
         )
