@@ -32,6 +32,8 @@ router.put('/:id', (req, res) =>{
         UPDATE movies SET title = $2, description = $3 WHERE id = $1;
     `;
     const values =  [id, title, desc]
+    console.log('REQ BODY IS:', req.body);
+    console.log('ROUTER VALUES:', values);
     pool.query(queryText, values)
         .then( (result) => {
             res.send(result.rows);

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 class Edit extends Component {
 
   state = {
+    id: this.props.movie.id,
     title: '',
     description: ''
   }
@@ -35,6 +36,7 @@ class Edit extends Component {
         <h1>Details</h1>
         <button onClick={this.goBackHome}>Back to Movie List</button>
         <section>
+        {/* {JSON.stringify(this.props.movie.id)} */}
             <img src={this.props.movie.poster} alt={this.props.movie.title} onClick={this.goToDetails}/>
             <p>{this.props.movie.title}</p>
             <p>{this.props.movie.description}</p>
