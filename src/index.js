@@ -24,6 +24,7 @@ function* rootSaga() {
 }
 
 // SAGAS
+// gets movie list
 function * getMovies (action) {
     try {
       const getResponse = yield axios.get('/movies');
@@ -34,6 +35,7 @@ function * getMovies (action) {
     }
   }
 
+// updates movies from user input and sends to router
 function * updateMovie (action) {
     try {
         const getResponse = yield axios.put(`/movies/+${action.payload.id}`, action.payload);

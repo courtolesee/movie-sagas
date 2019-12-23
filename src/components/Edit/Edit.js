@@ -1,31 +1,36 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
+// edit page
 class Edit extends Component {
 
+  // id stays the same, title & desc change based on user input
   state = {
     id: this.props.movie.id,
     title: '',
     description: ''
   }
 
+  // capture user input
   handleChange = (event, newState) => {
     this.setState({
       [newState]: event.target.value
     })
-    console.log('in handleChange:', event.target.value);
+    // console.log('in handleChange:', event.target.value);
   }
 
+  // send user input
   sendEditUpdate = (event)=>{
     event.preventDefault();
     this.props.dispatch({ type: 'SEND_UPDATE', payload: this.state });
   }
 
-
+  // if back to movie list is clicked
   goBackHome = () => {
       this.props.history.push('/');
   }
 
+  // if cancel is clicked
   goBackDetails = () => {
       this.props.history.push('/details');
   }

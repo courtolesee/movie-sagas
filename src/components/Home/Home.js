@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import MovieCard from '../MovieCard/MovieCard'
 
+// home page - maps list of movies
 class Home extends Component {
   
     render () {

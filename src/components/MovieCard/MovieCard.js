@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { withRouter } from 'react-router-dom';
 import {connect} from 'react-redux';
 
-
+// used for each movie reder
 class MovieCard extends Component {
     
     goToDetails = () => {
