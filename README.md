@@ -1,5 +1,5 @@
 # React-Redux with Sagas, Movie List
-Duration: Weekend Challenge (2 days)
+Duration: Weekend Challenge (2 days) for Prime Digital Academy's Tier 2 Week 13.
 
 ## Description
 This project stores movie information, including each movie's poster, title, associated genres, and description. Each movie's title and desctiption can be edited by the user.
