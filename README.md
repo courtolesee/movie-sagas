@@ -9,10 +9,10 @@ Whiteboard to do task organization and wireframing
 ![Whiteboard Wireframe & Checklist](Wireframe_Checklsit.jpeg)
 
 ## Installation
-1. Run npm install in your terminal
-2. Run npm run server in your terminal
-3. Run npm run client in your terminal (this will open a new browser in your tab)
-4. Create a database called saga_movies_weekend
+1. Run `npm install` in your terminal
+2. Run `npm run server` in your terminal
+3. Run `npm run client` in your terminal (this will open a new browser in your tab)
+4. Create a database called `saga_movies_weekend`
 5. Copy and past the query text in the database.sql file and run in that database in Postico. 
 
 ## Usage
