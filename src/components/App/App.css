@@ -54,13 +54,21 @@ input {
   font-size: 1.75em;
 }
 
-.genres {
+.genres, .genresDetails {
   font-size: 1em;
   font-style: italic;
   margin-top: 1em;
   margin-bottom: 1em;
+  color: white;
+  background-color: rgb(53, 50, 50);
 }
 
-.description {
+.description, .descriptionDetails {
   font-size: 0.85em;
+  padding: .5%;
+}
+
+.descriptionDetails, .genresDetails {
+  padding-left: 40%;
+  padding-right: 40%;
 }
