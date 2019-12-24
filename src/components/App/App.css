@@ -63,12 +63,44 @@ input {
   background-color: rgb(53, 50, 50);
 }
 
-.description, .descriptionDetails {
+.description, .descriptionDetails, .descriptionEdit {
   font-size: 0.85em;
   padding: .5%;
 }
 
-.descriptionDetails, .genresDetails {
+.descriptionDetails, .descriptionEdit, .genresDetails {
   padding-left: 40%;
   padding-right: 40%;
+}
+
+.editBtn, .saveBtn, .cancelBtn, .backBtn {
+  border-radius: 12px;
+  transition-duration: 0.4s;
+  color: white;
+  font-size: 15px;
+  margin-bottom: 2em;
+}
+
+.editBtn, .saveBtn {
+  background-color: rgb(47, 84, 207);
+}
+
+.editBtn:hover, .saveBtn:hover {
+  background-color: rgb(22, 41, 104);
+}
+
+.cancelBtn {
+  background-color: rgb(184, 5, 5);
+}
+
+.cancelBtn:hover {
+  background-color: rgb(83, 4, 4);
+}
+
+.backBtn {
+  background-color: green;
+}
+
+.backBtn:hover {
+  background-color: rgb(2, 73, 2);
 }

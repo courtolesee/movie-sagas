@@ -40,19 +40,19 @@ class Edit extends Component {
     return (
       <div>
         <h1>Details</h1>
-        <button onClick={this.goBackHome}>Back to Movie List</button>
+        <button className="backBtn" onClick={this.goBackHome}>Back to Movie List</button>
         <section>
         {/* {JSON.stringify(this.props.movie.id)} */}
             <img src={this.props.movie.poster} alt={this.props.movie.title} onClick={this.goToDetails}/>
             <p>{this.props.movie.title}</p>
-            <p>{this.props.movie.description}</p>
+            <p className="descriptionEdit">{this.props.movie.description}</p>
             <input placeholder="Edit the Title" type="text" onChange={(event)=>this.handleChange(event, 'title')} value={this.state.title}/>
             <br/>
             <textarea placeholder="Edit the Description" onChange={(event)=>this.handleChange(event, 'description')} value={this.state.description}/>
         </section>
         <section>
-            <button onClick={this.goBackDetails}>Cancel Edits</button>
-            <button onClick={this.sendEditUpdate}>Save Edits</button>
+            <button className="cancelBtn" onClick={this.goBackDetails}>Cancel Edits</button>
+            <button className="saveBtn" onClick={this.sendEditUpdate}>Save Edits</button>
         </section>
       </div>
     )
